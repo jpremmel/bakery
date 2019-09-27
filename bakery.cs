@@ -1,24 +1,11 @@
-using System;
-
 namespace Bakery
 {
     class Bread
     {
-        private int _loafPrice;
-        public int LoafPrice
-        { 
-            get
-            {
-                return _loafPrice;
-            }
-            set
-            {
-                Console.WriteLine("To change the loaf price, you will need special override permission from Pierre. Please contact him directly.");
-            }
-        }
+        public int LoafPrice { get; set;}
         public Bread()
         {
-            _loafPrice = 5;
+            LoafPrice = 5;
         }
         public int CalcPrice(int loaves)
         {
@@ -28,21 +15,10 @@ namespace Bakery
     }
     class Pastry
     {
-        private int _pastryPrice;
-        public int PastryPrice
-        { 
-            get
-            {
-                return _pastryPrice;
-            }
-            set
-            {
-                Console.WriteLine("To change the pastry price, you will need special override permission from Pierre. Please contact him directly.");
-            }
-        }
+        public int PastryPrice { get; set;}
         public Pastry()
         {
-            _pastryPrice = 2;
+            PastryPrice = 2;
         }
         public int CalcPrice(int pastries)
         {

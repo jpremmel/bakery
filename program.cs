@@ -14,7 +14,7 @@ class Program
         {
             loaves = int.Parse(Console.ReadLine());
         }
-        catch (System.FormatException e)
+        catch (System.FormatException)
         {
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("Numerical input only. Please try again.");
@@ -29,7 +29,7 @@ class Program
         {
             pastries = int.Parse(Console.ReadLine());
         }
-        catch (System.FormatException e)
+        catch (System.FormatException)
         {
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("Numerical input only. Please try again.");

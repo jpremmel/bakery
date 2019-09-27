@@ -13,16 +13,9 @@ namespace Bakery
 
         public int CalcPrice(int loaves)
         {
-            int price = 0;
-
-            
-
-
-            price = LoafPrice * loaves;
-
+            int price = (loaves / 3) * (LoafPrice * 2) + (LoafPrice * (loaves % 3));
             return price;
         }
-
     }
 
     class Pastry

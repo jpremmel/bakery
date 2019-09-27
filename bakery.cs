@@ -11,7 +11,14 @@ namespace Bakery
             LoafPrice = 5;
         }
 
-        
+        public int CalcPrice(int loaves)
+        {
+            int price = 0;
+
+            price = LoafPrice * loaves;
+
+            return price;
+        }
 
     }
 
@@ -22,6 +29,15 @@ namespace Bakery
         public Pastry()
         {
             PastryPrice = 2;
+        }
+
+        public int CalcPrice(int pastries)
+        {
+            int price = 0;
+
+            price = PastryPrice * pastries;
+            
+            return price;
         }
     }
 }

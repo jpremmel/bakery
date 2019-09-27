@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 using Bakery;
 
 class Program
@@ -9,18 +10,29 @@ class Program
         Console.WriteLine("~ One loaf of bread: $5. *Pierre's Deal: Buy two, get one free!* ~");
         Console.WriteLine("~ One pastry: $2. *Pierre's Deal: Buy three pastries for $5!* ~");
         Console.WriteLine("How many loaves of bread would you like to purchase?");
-        int loaves = 0;
-        loaves = int.Parse(Console.ReadLine());
-        
-        Bread bread = new Bread();
-        int breadPrice = bread.CalcPrice(loaves);
+        string breadInput = Console.ReadLine();
         Console.WriteLine("How many pastries would you like to purchase?");
-        int pastries = 0;
-        pastries = int.Parse(Console.ReadLine());
-        
-        Pastry pastry = new Pastry();
-        int pastryPrice = pastry.CalcPrice(pastries);
-        int totalPrice = breadPrice + pastryPrice;
-        Console.WriteLine("Your total price: $" + totalPrice);
+        string pastryInput = Console.ReadLine();
+        Regex regex = new Regex(@"^[0-9]+$");
+        Match breadMatch = regex.Match(breadInput);
+        Match pastryMatch = regex.Match(pastryInput);
+        if (breadMatch.Success && pastryMatch.Success)
+        {
+            int loaves = int.Parse(breadInput);
+            Bread bread = new Bread();
+            int breadPrice = bread.CalcPrice(loaves);
+            int pastries = int.Parse(pastryInput);
+            Pastry pastry = new Pastry();
+            int pastryPrice = pastry.CalcPrice(pastries);
+            int totalPrice = breadPrice + pastryPrice;
+            Console.WriteLine("Your total price: $" + totalPrice);
+        }
+        else
+        {
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("Numerical input only. Please try again.");
+            Console.WriteLine("---------------------------------------");
+            Main();
+        }  
     }
 }

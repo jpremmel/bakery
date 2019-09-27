@@ -15,6 +15,9 @@ namespace Bakery
         {
             int price = 0;
 
+            
+
+
             price = LoafPrice * loaves;
 
             return price;
@@ -36,7 +39,7 @@ namespace Bakery
             int price = 0;
 
             price = PastryPrice * pastries;
-            
+
             return price;
         }
     }

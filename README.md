@@ -1,6 +1,6 @@
 # _Pierre's Bakery_
 
-#### _A console application for calculating the price of bread and pastries at a fictional bakery, 27 Sept 2019_
+#### _A console application for calculating the price of bread loaves and pastries at a fictional bakery, 27 Sept 2019_
 
 #### By _**Jacqueline Remmel**_
 

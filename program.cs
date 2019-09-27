@@ -2,7 +2,7 @@ using System;
 using System.Text.RegularExpressions;
 using Bakery;
 
-class Program
+class BakeryProgram
 {
     static void Main()
     {

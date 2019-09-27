@@ -26,6 +26,12 @@ class Program
             int pastryPrice = pastry.CalcPrice(pastries);
             int totalPrice = breadPrice + pastryPrice;
             Console.WriteLine("Your total price: $" + totalPrice);
+
+
+            Console.WriteLine("bread.LoafPrice: " + bread.LoafPrice);
+            bread.LoafPrice = 8;
+            Console.WriteLine("bread.LoafPrice: " + bread.LoafPrice);
+
         }
         else
         {

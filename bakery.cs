@@ -1,11 +1,25 @@
+using System;
+
 namespace Bakery
 {
     class Bread
     {
-        public int LoafPrice { get; set; }
+        private int _loafPrice;
+        public int LoafPrice
+        { 
+            get
+            {
+                return _loafPrice;
+            }
+            set
+            {
+                Console.WriteLine("To change the price, you will need special override permission from Pierre. Please contact him directly.");
+            }
+        
+        }
         public Bread()
         {
-            LoafPrice = 5;
+            _loafPrice = 5;
         }
         public int CalcPrice(int loaves)
         {
